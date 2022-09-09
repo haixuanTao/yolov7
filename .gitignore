@@ -23,6 +23,8 @@
 !setup.cfg
 !cfg/yolov3*.cfg
 
+tt100k/
+tt100k.zip
 storage.googleapis.com
 runs/*
 data/*
