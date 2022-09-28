@@ -1,6 +1,27 @@
 # Fork of Official YOLOv7 for TT100k
 
+1. To train the model you need to download the training set from: https://cg.cs.tsinghua.edu.cn/traffic-sign/
+2. Use the label set from: https://github.com/halftop/TT100K_YOLO_Label
+3. Make a validation set by splitting the training set 
+4. Put them at the root of this repository as follows:
 
+yolov7
+|-tt100k
+|  |- images
+|  |   |-train
+|  |   |-val
+|  |   |-test
+|  |- labels
+|  |   |-train
+|  |   |-val
+|  |   |-test
+
+5. Use the reparametrization script [reparametrization.ipynb](https://github.com/haixuanTao/yolov7/blob/main/tools/reparameterization.ipynb) to reparamatrize pretrained model.
+6. Run:
+
+```bash
+python train.py --workers 8 --device 0 --batch-size 8 --data data/tt100k.yaml --img 640 640 --cfg cfg/deploy/yolov7.yaml --weights 'cfg/deploy/yolov7.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml --freeze 105
+```
 ---
 
 ## Original Readme
