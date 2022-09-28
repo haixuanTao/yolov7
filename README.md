@@ -16,8 +16,9 @@ yolov7
 |  |  |-val
 |  |  |-test
 ```
-5. Use the reparametrization script [reparametrization.ipynb](https://github.com/haixuanTao/yolov7/blob/main/tools/reparameterization.ipynb) to reparamatrize pretrained model.
-6. Run:
+5. Download pretrained weight at: [**YOLOv7**](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt)
+6. Use the reparametrization script [reparametrization.ipynb](https://github.com/haixuanTao/yolov7/blob/main/tools/reparameterization.ipynb) to reparamatrize pretrained model.
+7. Run:
 
 ```bash
 python train.py --workers 8 --device 0 --batch-size 8 --data data/tt100k.yaml --img 640 640 --cfg cfg/deploy/yolov7.yaml --weights 'cfg/deploy/yolov7.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml --freeze 105
