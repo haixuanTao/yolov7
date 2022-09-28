@@ -4,18 +4,18 @@
 2. Use the label set from: https://github.com/halftop/TT100K_YOLO_Label
 3. Make a validation set by splitting the training set 
 4. Put them at the root of this repository as follows:
-
+```
 yolov7
 |-tt100k
 |  |- images
-|  |   |-train
-|  |   |-val
-|  |   |-test
+|  |  |-train
+|  |  |-val
+|  |  |-test
 |  |- labels
-|  |   |-train
-|  |   |-val
-|  |   |-test
-
+|  |  |-train
+|  |  |-val
+|  |  |-test
+```
 5. Use the reparametrization script [reparametrization.ipynb](https://github.com/haixuanTao/yolov7/blob/main/tools/reparameterization.ipynb) to reparamatrize pretrained model.
 6. Run:
 
